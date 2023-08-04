@@ -2,40 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
-    max-width: 90rem;
-    margin: 0 auto;
-    padding: 1.5rem;
+.container {
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 1.5rem;
 }
-.btn{
-    background-color:transparent;
-    padding:0.2rem 1rem;
-    border-radius: 3rem;
-    border:1px solid #2b2b2b;
+.btn {
+	background-color: transparent;
+	padding: 0.2rem 1rem;
+	border-radius: 3rem;
+	border: 1px solid #2b2b2b;
 }
-
-.btn.bg--itim{
-    border:none;
-    background:#000000;
+.btn:hover {
+	background-color: hsl(240, 1.51%, 90%);
 }
 
-@layer components{
-    .header{
-        @apply bg-pink-200 w-full
+.btn.bg--itim {
+	border: none;
+	background: #000000;
+}
+.btn.bg--itim:hover {
+	background-color: hsl(240, 1.51%, 20%);
+}
+
+@layer components {
+	.header {
+	    background-color:puti;
+        position:fixed;
+        width:100%
+	}
+	.header .header__wrapper {
+		@apply flex items-center justify-between
+        lg:flex-row lg:justify-between;
+	}
+	.header .branding img {
+		@apply lg:w-[3rem];
+	}
+	.header .branding {
+		@apply lg:flex lg:flex-row lg:gap-[1.5rem] 
+	}
+	.header .toggle__menu {
+		@apply flex flex-col gap-[.3rem] px-[0.5rem] py-[0.8rem] rounded-full
+        lg:hidden;
+	}
+	.header .toggle__menu:hover {
+		@apply bg-[#ebebeb]
+	}
+	.header .toggle__menu span {
+		@apply w-[1.5rem] h-[.15rem] bg-maitim rounded-full
+	}
+	.header .header__nav {
+		@apply absolute bg-puti right-[-100rem] top-[5.5rem] leading-[3.5rem] text-[1.2rem] w-[70%] h-[100vh] transition-all px-[2rem] py-[2.5rem]
+        lg:static lg:flex lg:w-fit lg:p-0 lg:gap-3 lg:uppercase lg:text-[1rem] lg:font-[600] lg:h-fit
+	}
+	.header .header__nav li:hover {
+		@apply text-lasalle;
+	}
+	.header .header__nav.open {
+		@apply right-0 transition-all
+	}
+	.header .header__nav .second {
+		@apply border-t-[1px]
+        lg:hidden;
+	}
+	.header .header__nav .second li:first-child a i {
+		@apply mr-2;
+	}
+	.header .header__actions {
+		@apply hidden 
+        lg:flex lg:flex-row lg:gap-[1.5rem];
+	}
+	.header .header__actions li:first-child a i {
+		@apply lg:mr-2;
+	}
+	.header .header__actions li:first-child:hover {
+		@apply lg:text-lasalle;
+	}
+	.header .toggle__menu.open span {
+		@apply transition-all;
+	}
+	.header .toggle__menu.open span:first-child {
+		@apply rotate-45 translate-y-[0.45rem]
+	}
+	.header .toggle__menu.open span:last-child {
+		@apply -rotate-45
+	}
+	.header .toggle__menu.open span:nth-child(2) {
+		@apply hidden
+	}
+    .buhok{
+        @apply h-[100vh] w-[100%] absolute left-0 top-[5.5rem] bg-maitim opacity-0 transition-all
     }
-    .header .header__wrapper{
-        @apply flex items-center justify-between
-    }
-    .header .toggle__menu{
-        @apply flex flex-col gap-[.3rem]
-    }
-    .header .toggle__menu span{
-        @apply w-[2rem] h-[.2rem] bg-puti
-    }
-    .header .header__nav{
-        @apply absolute right-[-21.1rem] top-[5.5rem] bg-blue-300 leading-[3rem] text-[1.2rem] w-[70%] h-full transition-all px-[2rem] py-[2.5rem]
-    }   
-    .header .header__nav.open{
-        @apply right-0 transition-all
+    .buhok.open{
+        @apply opacity-40 transition-all
     }
 }
