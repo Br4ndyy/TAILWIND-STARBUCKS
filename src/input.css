@@ -143,13 +143,10 @@
     /*------FAVES-----*/
 
     .fave__wrapper{
-        @apply bg-medyolasalle flex flex-col gap-[2rem]
+        @apply bg-medyolasalle flex flex-col gap-[2rem] w-full pt-[2rem]
     }
     .fave__wrapper h2{
         @apply text-center text-[1.5rem] font-bold
-    }
-    .fave__wrapper ul.fave__nav{
-        @apply flex flex-wrap gap-[3rem] mx-auto justify-center
     }
     .fave__desc__wrapper{
         @apply bg-medyolasalle2
@@ -161,6 +158,24 @@
         @apply text-[1.2rem] font-bold
     }
     .fave__item__content{
-        @apply flex flex-col justify-center
+        @apply hidden p-[1.5rem]
+    }
+    .fave__item__content.active{
+        @apply block
+    }
+    .fave__item__content img{
+        @apply mx-auto
+    }
+    .fave__nav{
+        @apply text-center 
+    }
+    .fave__nav tr:nth-child(2){
+        @apply w-[2rem] h-[0.3rem] bg-black
+    }
+    .lin__link{
+        @apply hidden
+    }
+    .lin__link.active{
+        @apply block
     }
 }
