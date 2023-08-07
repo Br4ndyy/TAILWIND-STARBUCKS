@@ -190,6 +190,50 @@
 	.easy__content h3 {
 		@apply border-2 border-lasalle rounded-full py-2 px-5 text-[1.5rem] text-lasalle;
 	}
+	/*------EXTRAS--------*/
+
+	.extras {
+		@apply bg-puti;
+	}
+	.extras .container {
+		@apply py-[4rem]
+        lg:px-[3rem] lg:py-[7rem];
+	}
+	.extras__wrapper {
+		@apply flex flex-col gap-[1.5rem] justify-center items-center
+        lg:gap-[5rem];
+	}
+	.extras__section {
+		@apply flex flex-col gap-[1.8rem]
+        lg:grid lg:grid-cols-[_1fr,_1fr,_1fr];
+	}
+	.extras__title {
+		@apply flex flex-col gap-[1rem] text-center;
+	}
+	.extras__title h2 {
+		@apply text-[1.5rem] font-medium
+        lg:text-[2rem];
+	}
+	.extras__content {
+		@apply flex gap-[1rem] items-start
+        lg:flex lg:flex-col lg:text-center lg:gap-[2rem] lg:px-[3rem] lg:items-center
+	}
+	.extras__text {
+		@apply flex flex-col gap-[0.8rem]
+	}
+	.extras__text p {
+		@apply text-[0.9rem]
+	}
+	.extras__text a {
+		@apply underline text-lasalle
+	}
+	.extras__text h2 {
+		@apply font-semibold pb-[0.5rem] border-transparent
+        lg:pb-[1.4rem]
+	}
+	.extras__content img {
+		@apply w-[6.5rem]
+	}
 	/*------MGA-KALBO-----*/
 
 	.kalbo {
@@ -238,7 +282,8 @@
 		@apply text-center text-[1.5rem] font-bold;
 	}
 	.fave__desc__wrapper {
-		@apply bg-medyolasalle2;
+		@apply bg-medyolasalle2 h-[400px] relative
+        lg:h-[250px]
 	}
 	.fave__text {
 		@apply flex flex-col gap-[1rem] text-center
@@ -248,20 +293,33 @@
 		@apply text-[1.2rem] font-bold;
 	}
 	.fave__item__content {
-		@apply hidden p-[1.5rem]
+		@apply p-[1.5rem] absolute top-[4rem] opacity-0 ease-in duration-300
+        lg:flex lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:max-w-[50rem] lg:top-[8rem]
 	}
 	.fave__item__content.active {
+		@apply opacity-[1] ease-in duration-[.5s] top-0
+	}
+	/* .fave__item__content.active {
 		@apply block
         lg:flex lg:items-center justify-center
-	}
+	} */
 	.fave__item__content img {
 		@apply mx-auto
         lg:mx-0 lg:w-[20rem]
 	}
 	.fave__nav {
-		@apply max-w-[27rem] flex flex-wrap gap-[2rem] mx-auto justify-center text-[1rem]
-        lg:font-semibold lg:text-[1.4rem] lg:max-w-[30rem]
+		@apply flex flex-wrap mx-auto justify-center text-[1rem]
+        lg:font-semibold lg:text-[1.2rem] lg:max-w-[35rem]
 	}
+    .fave__nav li{
+        @apply p-[1.573rem] relative
+    }
+    .fave__nav li:after{
+        @apply content-[''] w-0 h-[3px] bg-red-500 block absolute bottom-0 left-0 origin-bottom-left ease-in duration-[0.5s]
+    }
+    .fave__nav li.active:after{
+        @apply w-full
+    }
 	.lin__link {
 		@apply hidden;
 	}

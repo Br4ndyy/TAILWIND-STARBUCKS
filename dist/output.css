@@ -940,6 +940,122 @@ video {
   color: rgb(0 99 65 / var(--tw-text-opacity));
 }
 
+/*------EXTRAS--------*/
+
+.extras {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.extras .container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .extras .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.extras__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .extras__wrapper {
+    gap: 5rem;
+  }
+}
+
+.extras__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+@media (min-width: 1024px) {
+  .extras__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.extras__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.extras__title h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .extras__title h2 {
+    font-size: 2rem;
+  }
+}
+
+.extras__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .extras__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+  }
+}
+
+.extras__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.extras__text p {
+  font-size: 0.9rem;
+}
+
+.extras__text a {
+  --tw-text-opacity: 1;
+  color: rgb(0 99 65 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
+.extras__text h2 {
+  border-color: transparent;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .extras__text h2 {
+    padding-bottom: 1.4rem;
+  }
+}
+
+.extras__content img {
+  width: 6.5rem;
+}
+
 /*------MGA-KALBO-----*/
 
 .kalbo {
@@ -1039,8 +1155,16 @@ video {
 }
 
 .fave__desc__wrapper {
+  position: relative;
+  height: 400px;
   --tw-bg-opacity: 1;
   background-color: rgb(212 233 226 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  .fave__desc__wrapper {
+    height: 250px;
+  }
 }
 
 .fave__text {
@@ -1065,21 +1189,36 @@ video {
 }
 
 .fave__item__content {
-  display: none;
+  position: absolute;
+  top: 4rem;
   padding: 1.5rem;
-}
-
-.fave__item__content.active {
-  display: block;
-  justify-content: center;
+  opacity: 0;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 @media (min-width: 1024px) {
-  .fave__item__content.active {
+  .fave__item__content {
+    left: 50%;
+    top: 8rem;
     display: flex;
-    align-items: center;
+    max-width: 50rem;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
+
+.fave__item__content.active {
+  top: 0px;
+  opacity: 1;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* .fave__item__content.active {
+		@apply block
+        lg:flex lg:items-center justify-center
+	} */
 
 .fave__item__content img {
   margin-left: auto;
@@ -1098,19 +1237,42 @@ video {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 27rem;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
   font-size: 1rem;
 }
 
 @media (min-width: 1024px) {
   .fave__nav {
-    max-width: 30rem;
-    font-size: 1.4rem;
+    max-width: 35rem;
+    font-size: 1.2rem;
     font-weight: 600;
   }
+}
+
+.fave__nav li {
+  position: relative;
+  padding: 1.573rem;
+}
+
+.fave__nav li:after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: block;
+  height: 3px;
+  width: 0px;
+  transform-origin: bottom left;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.fave__nav li.active:after {
+  width: 100%;
 }
 
 .lin__link {
