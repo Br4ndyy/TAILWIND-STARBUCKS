@@ -966,7 +966,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 @media (min-width: 1024px) {
@@ -978,7 +978,7 @@ video {
 .extras__section {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 3rem;
 }
 
 @media (min-width: 1024px) {
@@ -996,13 +996,24 @@ video {
 }
 
 .extras__title h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 @media (min-width: 1024px) {
   .extras__title h2 {
     font-size: 2rem;
+  }
+}
+
+.extras__title p {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1024px) {
+  .extras__title p {
+    width: 42rem;
+    font-size: 1rem;
   }
 }
 
@@ -1018,8 +1029,6 @@ video {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
     text-align: center;
   }
 }
@@ -1034,10 +1043,23 @@ video {
   font-size: 0.9rem;
 }
 
+@media (min-width: 1024px) {
+  .extras__text p {
+    width: 25rem;
+    font-size: 1rem;
+  }
+}
+
 .extras__text a {
   --tw-text-opacity: 1;
   color: rgb(0 99 65 / var(--tw-text-opacity));
   text-decoration-line: underline;
+}
+
+@media (min-width: 1024px) {
+  .extras__text a {
+    font-weight: 600;
+  }
 }
 
 .extras__text h2 {
@@ -1048,7 +1070,7 @@ video {
 
 @media (min-width: 1024px) {
   .extras__text h2 {
-    padding-bottom: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -1281,6 +1303,83 @@ video {
 
 .lin__link.active {
   display: block;
+}
+
+/*--------CASH--------*/
+
+.cash {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 240 235 / var(--tw-bg-opacity));
+}
+
+.cash__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.cash__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.cash__title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cash__title p {
+  font-size: 0.8rem;
+}
+
+.cash__row {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.cash__row:first-child {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.cash__card {
+  display: flex;
+  gap: 1rem;
+}
+
+.cash__text h2 {
+  font-weight: 700;
+}
+
+.cash__text p {
+  font-size: 0.9rem;
+}
+
+.cash__card img {
+  width: 7rem;
+}
+
+.cash__item h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.cash__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cash__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .visible {

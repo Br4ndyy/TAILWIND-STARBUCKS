@@ -200,36 +200,42 @@
         lg:px-[3rem] lg:py-[7rem];
 	}
 	.extras__wrapper {
-		@apply flex flex-col gap-[1.5rem] justify-center items-center
+		@apply flex flex-col gap-[3rem] justify-center items-center
         lg:gap-[5rem];
 	}
 	.extras__section {
-		@apply flex flex-col gap-[1.8rem]
+		@apply flex flex-col gap-[3rem]
         lg:grid lg:grid-cols-[_1fr,_1fr,_1fr];
 	}
 	.extras__title {
 		@apply flex flex-col gap-[1rem] text-center;
 	}
 	.extras__title h2 {
-		@apply text-[1.5rem] font-medium
+		@apply text-[1.8rem] font-medium
         lg:text-[2rem];
+	}
+	.extras__title p {
+		@apply text-[0.9rem]
+        lg:text-[1rem] lg:w-[42rem]
 	}
 	.extras__content {
 		@apply flex gap-[1rem] items-start
-        lg:flex lg:flex-col lg:text-center lg:gap-[2rem] lg:px-[3rem] lg:items-center
+        lg:flex lg:flex-col lg:text-center lg:gap-[2rem] lg:items-center
 	}
 	.extras__text {
 		@apply flex flex-col gap-[0.8rem]
 	}
 	.extras__text p {
 		@apply text-[0.9rem]
+        lg:text-[1rem] lg:w-[25rem]
 	}
 	.extras__text a {
 		@apply underline text-lasalle
+        lg:font-semibold
 	}
 	.extras__text h2 {
 		@apply font-semibold pb-[0.5rem] border-transparent
-        lg:pb-[1.4rem]
+        lg:text-[1.3rem]
 	}
 	.extras__content img {
 		@apply w-[6.5rem]
@@ -326,4 +332,48 @@
 	.lin__link.active {
 		@apply block;
 	}
+
+    /*--------CASH--------*/
+    .cash{
+        @apply bg-beige
+    }
+    .cash__wrapper{
+        @apply flex flex-col gap-[4rem]
+    }
+    .cash__title{
+        @apply text-center flex flex-col gap-[1rem] pt-[3rem]
+    }
+    .cash__title h2{
+        @apply font-semibold text-[1.5rem]
+    }
+    .cash__title p{
+        @apply text-[0.8rem]
+    }
+    .cash__row{
+        @apply flex flex-col gap-[3rem] pb-[3rem]
+    }
+    .cash__row:first-child{
+        @apply border-b-[1px] border-gray-300
+    }
+    .cash__card{
+        @apply flex gap-[1rem]
+    }
+    .cash__text h2{
+        @apply font-bold
+    }
+    .cash__text p{
+        @apply text-[0.9rem]
+    }
+    .cash__card img{
+        @apply w-[7rem]
+    }
+    .cash__item h2{
+        @apply font-bold text-[1.2rem]
+    }
+    .cash__text{
+        @apply flex flex-col gap-[1rem]
+    }
+    .cash__section{
+        @apply flex flex-col gap-[2rem]
+    }
 }
