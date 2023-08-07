@@ -1342,6 +1342,14 @@ video {
   padding-bottom: 3rem;
 }
 
+@media (min-width: 1024px) {
+  .cash__row {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
 .cash__row:first-child {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
@@ -1361,13 +1369,27 @@ video {
   font-size: 0.9rem;
 }
 
+@media (min-width: 1024px) {
+  .cash__text p {
+    width: 20rem;
+    font-size: 1.1rem;
+  }
+}
+
 .cash__card img {
-  width: 7rem;
+  width: 7.5rem;
 }
 
 .cash__item h2 {
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .cash__item h2 {
+    width: 10rem;
+    font-size: 1.5rem;
+  }
 }
 
 .cash__text {
@@ -1380,6 +1402,130 @@ video {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+/*---------DELTA---------*/
+
+.delta{
+  /* background-color:#D4E9E2;
+		height: 775px;
+
+		@media screen and (min-width:1024px){
+		background-image: url('./img3/Starbucks® Rewards – Order Ahead, Endless Extras, Free Coffee_ Starbucks Coffee Company_files/background.webp');
+		background-size: cover;
+		background-color: #d0eae4;
+		height: 550px;
+		padding: 1.5rem;
+		} */
+}
+
+@media (min-width: 1024px) {
+  .delta {
+    background-image: url('./img3/background.webp');
+    background-size: cover;
+    padding: 2rem;
+  }
+}
+
+.delta__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 233 226 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  .delta__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.delta__wrapper img {
+  width: 7rem;
+}
+
+@media (min-width: 1024px) {
+  .delta__wrapper img {
+    display: none;
+  }
+}
+
+.delta__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  text-align: center;
+}
+
+.delta__content span {
+  margin-left: auto;
+  margin-right: auto;
+  width: 32rem;
+  font-size: 1.2rem;
+}
+
+.delta__content a {
+  --tw-text-opacity: 1;
+  color: rgb(0 99 65 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
+.delta__content #rew {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration-line: none;
+}
+
+.delta__content h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.delta__content p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 32rem;
+  font-size: 1.2rem;
+}
+
+.delta__content .image1 img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 15rem;
+}
+
+.delta__content a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+  .delta__wrapper #left {
+    display: block;
+    width: 20rem;
+  }
+}
+
+.image2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .image2 #left2 {
+    display: block;
+    width: 20rem;
+  }
 }
 
 .visible {

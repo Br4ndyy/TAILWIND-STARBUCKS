@@ -13,8 +13,8 @@ module.exports = {
 				beige: '#F2F0EB',
 			},
 			backgroundImage: {
-				star: "url('./img/rewards/star.png')",
-			},
+				'burat': "url('./img3/background.webp')",
+			}
 		},
 	},
 	plugins: [],

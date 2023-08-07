@@ -350,7 +350,8 @@
         @apply text-[0.8rem]
     }
     .cash__row{
-        @apply flex flex-col gap-[3rem] pb-[3rem]
+        @apply flex flex-col gap-[3rem] pb-[3rem] 
+		lg:flex lg:flex-row lg:gap-[4rem]
     }
     .cash__row:first-child{
         @apply border-b-[1px] border-gray-300
@@ -363,12 +364,13 @@
     }
     .cash__text p{
         @apply text-[0.9rem]
+		lg:w-[20rem] lg:text-[1.1rem]
     }
     .cash__card img{
-        @apply w-[7rem]
+        @apply w-[7.5rem]
     }
     .cash__item h2{
-        @apply font-bold text-[1.2rem]
+        @apply font-bold text-[1.2rem] lg:w-[10rem] lg:text-[1.5rem]
     }
     .cash__text{
         @apply flex flex-col gap-[1rem]
@@ -376,4 +378,61 @@
     .cash__section{
         @apply flex flex-col gap-[2rem]
     }
+
+	/*---------DELTA---------*/
+	.delta{
+		/* background-color:#D4E9E2;
+		height: 775px;
+
+		@media screen and (min-width:1024px){
+		background-image: url('./img3/Starbucks® Rewards – Order Ahead, Endless Extras, Free Coffee_ Starbucks Coffee Company_files/background.webp');
+		background-size: cover;
+		background-color: #d0eae4;
+		height: 550px;
+		padding: 1.5rem;
+		} */
+		@apply lg:bg-burat lg:p-[2rem] lg:bg-cover
+	}
+	.delta__wrapper{
+		@apply flex flex-col gap-[1.5rem]
+		lg:flex lg:flex-row lg:items-center lg:justify-center bg-medyolasalle2 
+	}
+	.delta__wrapper img{
+		@apply w-[7rem]
+		lg:hidden
+	}
+	.delta__content{
+		@apply flex flex-col gap-[1.8rem] text-center
+	}
+	.delta__content span{
+		@apply text-[1.2rem] w-[32rem] mx-auto
+	}
+	.delta__content a{
+		@apply underline text-lasalle
+	}
+	.delta__content #rew{
+		@apply no-underline text-[1.2rem] font-semibold py-[0.5rem]
+	}
+	.delta__content h2{
+		@apply text-[2rem] font-semibold w-[20rem] mx-auto
+	}
+	.delta__content p{
+		@apply text-[1.2rem] w-[32rem] mx-auto
+	}
+	.delta__content .image1 img{
+		@apply w-[15rem] mx-auto block
+	}
+	.delta__content a{
+		@apply mx-auto
+	}
+	.delta__wrapper #left{
+		@apply lg:block lg:w-[20rem]
+	}
+	.image2{
+		@apply flex justify-end
+	}
+	.image2 #left2{
+		@apply lg:block lg:w-[20rem]
+	}
+
 }
