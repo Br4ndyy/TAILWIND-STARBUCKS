@@ -11,6 +11,7 @@ module.exports = {
 				medyolasalle: '#f1f8f5',
 				medyolasalle2: '#d4e9e2',
 				beige: '#F2F0EB',
+				medyomaputi:'#f9f9f9'
 			},
 			backgroundImage: {
 				'burat': "url('./img3/background.webp')",

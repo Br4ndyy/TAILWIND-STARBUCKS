@@ -381,16 +381,6 @@
 
 	/*---------DELTA---------*/
 	.delta{
-		/* background-color:#D4E9E2;
-		height: 775px;
-
-		@media screen and (min-width:1024px){
-		background-image: url('./img3/Starbucks® Rewards – Order Ahead, Endless Extras, Free Coffee_ Starbucks Coffee Company_files/background.webp');
-		background-size: cover;
-		background-color: #d0eae4;
-		height: 550px;
-		padding: 1.5rem;
-		} */
 		@apply lg:bg-burat lg:p-[2rem] lg:bg-cover
 	}
 	.delta__wrapper{
@@ -402,10 +392,10 @@
 		lg:hidden
 	}
 	.delta__content{
-		@apply flex flex-col gap-[1.8rem] text-center
+		@apply flex flex-col gap-[1rem] text-center p-[1.5rem] lg:py-[1rem] lg:px-[5rem]
 	}
 	.delta__content span{
-		@apply text-[1.2rem] w-[32rem] mx-auto
+		@apply text-[0.8rem] lg:text-[1rem] lg:w-[33rem] lg:mx-auto
 	}
 	.delta__content a{
 		@apply underline text-lasalle
@@ -414,25 +404,91 @@
 		@apply no-underline text-[1.2rem] font-semibold py-[0.5rem]
 	}
 	.delta__content h2{
-		@apply text-[2rem] font-semibold w-[20rem] mx-auto
+		@apply text-[2rem] font-semibold w-[20rem] mx-auto lg:w-full
 	}
 	.delta__content p{
-		@apply text-[1.2rem] w-[32rem] mx-auto
+		@apply text-[0.8rem] lg:text-[1rem] lg:w-[33rem] lg:mx-auto
 	}
 	.delta__content .image1 img{
-		@apply w-[15rem] mx-auto block
+		@apply w-[12rem] mx-auto block
 	}
 	.delta__content a{
 		@apply mx-auto
 	}
 	.delta__wrapper #left{
-		@apply lg:block lg:w-[20rem]
+		@apply hidden lg:block lg:w-[20rem]
 	}
 	.image2{
 		@apply flex justify-end
 	}
 	.image2 #left2{
-		@apply lg:block lg:w-[20rem]
+		@apply hidden lg:block lg:w-[20rem]
 	}
 
+	/*-----------QS----------------*/
+	.q{
+		@apply bg-puti 
+	}
+	.q__wrapper{
+		@apply py-[3rem] lg:px-[10rem] lg:py-[5rem]
+	}
+	.q__wrapper h2{
+		@apply text-[1.5rem] font-semibold pb-[1.5rem] lg:text-[2rem]
+	}
+	.q__wrapper span{
+		@apply text-[0.9rem] lg:text-[1rem]
+	}
+	.q__wrapper span a{
+		@apply text-lasalle underline
+	}
+	.q__wrapper span a i{
+		@apply no-underline
+	}
+	
+	/*----------RESTRICTIONS-----------*/
+	.res{
+		@apply bg-medyomaputi
+	}
+	.res__wrapper{
+		@apply py-[0.5rem]
+	}
+	.res__header{
+		@apply text-[0.8rem] flex flex-col gap-[1rem] lg:gap-[0.5rem]
+		lg:text-[0.9rem]
+	}
+	.res__header a{
+		@apply text-lasalle underline
+	}
+	.res__content{
+		@apply flex flex-col gap-[1.8rem]
+		lg:grid lg:grid-cols-2 lg:py-[2rem]
+	}
+	.res__content p{
+		@apply text-[0.8rem]
+		lg:text-[0.9rem]
+	}
+	.res__content span{
+		@apply text-[0.8rem]
+		lg:text-[0.9rem]
+	}
+	.res__content h2{
+		@apply text-semento font-semibold text-[1rem]
+		lg:font-bold
+	}
+	.res__content span a{
+		@apply text-lasalle underline
+	}
+	.earn{
+		@apply flex flex-col gap-[1rem] pt-[1.5rem]
+		lg:pt-0
+	}
+	.term{
+		@apply flex flex-col gap-[1rem]
+	}
+	.benefits{
+		@apply flex flex-col gap-[1rem]
+	}
+	.redeem{
+		@apply flex flex-col gap-[1rem]
+	}
 }
