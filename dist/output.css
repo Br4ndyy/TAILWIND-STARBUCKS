@@ -1978,14 +1978,6 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
-.top-0 {
-  top: 0px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -2144,6 +2136,18 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+@font-face{
+  font-family: Monserrat;
+
+  src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff")
+}
+
+@font-face{
+  font-family: Monserrat1;
+
+  src: url("../fonts/Montserrat-VariableFont_wght.woff")
 }
 
 .container {

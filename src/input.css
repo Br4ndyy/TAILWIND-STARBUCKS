@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+	font-family: Monserrat;
+	src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff")
+}
+@font-face{
+	font-family: Monserrat1;
+	src: url("../fonts/Montserrat-VariableFont_wght.woff")
+}
+
+
 .container {
 	max-width: 90rem;
 	margin: 0 auto;
