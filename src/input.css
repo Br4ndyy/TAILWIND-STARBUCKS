@@ -149,7 +149,10 @@
 		@apply w-[7rem] mx-auto lg:mx-0 p-[0.5rem] text-center font-medium;
 	}
 	.banner__content span a {
-		@apply underline mx-auto;
+		@apply underline mx-auto
+	}
+	.banner__content span a:hover{
+		@apply lg:no-underline
 	}
 
 	/*------EASY--------*/
@@ -186,6 +189,9 @@
 	}
 	.easy__text span a {
 		@apply underline text-lasalle;
+	}
+	.easy__text span a:hover{
+		@apply lg:no-underline
 	}
 	.easy__content h3 {
 		@apply border-2 border-lasalle rounded-full py-2 px-5 text-[1.5rem] text-lasalle;
@@ -230,8 +236,11 @@
         lg:text-[1rem] lg:w-[25rem]
 	}
 	.extras__text a {
-		@apply underline text-lasalle
+		@apply underline text-lasalle lg:w-fit lg:mx-auto
         lg:font-semibold
+	}
+	.extras__text a:hover {
+		@apply lg:no-underline
 	}
 	.extras__text h2 {
 		@apply font-semibold pb-[0.5rem] border-transparent
@@ -299,11 +308,21 @@
 		@apply text-[1.2rem] font-bold;
 	}
 	.fave__item__content {
-		@apply p-[1.5rem] absolute top-[4rem] opacity-0 ease-in duration-300
+		@apply p-[1.rem] absolute top-[4rem] opacity-0 ease-in duration-300
         lg:flex lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:max-w-[50rem] lg:top-[8rem]
+	}
+	.fave__desc__wrapper .fave__item__content:nth-child(3){
+		@apply lg:translate-y-7
+	}
+	.fave__desc__wrapper .fave__item__content:nth-child(4){
+		@apply lg:translate-y-7
+	}
+	.fave__desc__wrapper .fave__item__content:nth-child(5){
+		@apply lg:translate-y-7
 	}
 	.fave__item__content.active {
 		@apply opacity-[1] ease-in duration-[.5s] top-0
+		lg:flex lg:flex-row lg:items-center
 	}
 	/* .fave__item__content.active {
 		@apply block
@@ -314,14 +333,14 @@
         lg:mx-0 lg:w-[20rem]
 	}
 	.fave__nav {
-		@apply flex flex-wrap mx-auto justify-center text-[1rem]
+		@apply flex flex-wrap mx-auto justify-center text-[1.25rem] font-semibold
         lg:font-semibold lg:text-[1.2rem] lg:max-w-[35rem]
 	}
     .fave__nav li{
-        @apply p-[1.573rem] relative
+        @apply p-[1.2rem] relative
     }
     .fave__nav li:after{
-        @apply content-[''] w-0 h-[3px] bg-red-500 block absolute bottom-0 left-0 origin-bottom-left ease-in duration-[0.5s]
+        @apply content-[''] w-0 h-[3px] bg-lasalle block absolute bottom-0 left-0 origin-bottom-left ease-in duration-[0.5s]
     }
     .fave__nav li.active:after{
         @apply w-full
@@ -353,7 +372,7 @@
         @apply flex flex-col gap-[3rem] pb-[3rem] 
 		lg:flex lg:flex-row lg:gap-[4rem]
     }
-    .cash__row:first-child{
+    .cash__row:not(:last-child){
         @apply border-b-[1px] border-gray-300
     }
     .cash__card{
@@ -381,7 +400,7 @@
 
 	/*---------DELTA---------*/
 	.delta{
-		@apply lg:bg-burat lg:p-[2rem] lg:bg-cover
+		@apply lg:bg-omsim lg:p-[2rem] lg:bg-cover
 	}
 	.delta__wrapper{
 		@apply flex flex-col gap-[1.5rem]
@@ -395,10 +414,13 @@
 		@apply flex flex-col gap-[1rem] text-center p-[1.5rem] lg:py-[1rem] lg:px-[5rem]
 	}
 	.delta__content span{
-		@apply text-[0.8rem] lg:text-[1rem] lg:w-[33rem] lg:mx-auto
+		@apply text-[1rem] lg:text-[1rem] lg:w-[33rem] lg:mx-auto
 	}
 	.delta__content a{
 		@apply underline text-lasalle
+	}
+	.delta__content a:hover{
+		@apply lg:no-underline
 	}
 	.delta__content #rew{
 		@apply no-underline text-[1.2rem] font-semibold py-[0.5rem]
@@ -407,7 +429,7 @@
 		@apply text-[2rem] font-semibold w-[20rem] mx-auto lg:w-full
 	}
 	.delta__content p{
-		@apply text-[0.8rem] lg:text-[1rem] lg:w-[33rem] lg:mx-auto
+		@apply text-[1rem] lg:text-[1rem] lg:w-[33rem] lg:mx-auto
 	}
 	.delta__content .image1 img{
 		@apply w-[12rem] mx-auto block
@@ -441,6 +463,9 @@
 	.q__wrapper span a{
 		@apply text-lasalle underline
 	}
+	.q__wrapper span a:hover{
+		@apply lg:no-underline
+	}
 	.q__wrapper span a i{
 		@apply no-underline
 	}
@@ -451,6 +476,9 @@
 	}
 	.res__wrapper{
 		@apply py-[0.5rem]
+	}
+	.res__wrapper a:hover{
+		@apply lg:no-underline
 	}
 	.res__header{
 		@apply text-[0.8rem] flex flex-col gap-[1rem] lg:gap-[0.5rem]
@@ -490,5 +518,78 @@
 	}
 	.redeem{
 		@apply flex flex-col gap-[1rem]
+	}
+
+	/*-------FOOTER--------*/
+	.footer{
+		@apply bg-puti
+	}
+	.footer .container{
+		@apply border-t-[1px] border-semento mt-[2rem] pt-[2rem] pb-[5rem]
+	}
+	.footer__wrapper{
+		@apply border-b-[1px] border-semento pb-[3rem]
+	}
+	.footer__nav{
+		@apply flex flex-col gap-[2rem] text-[1.1rem]
+		lg:flex lg:flex-row lg:gap-[4rem]
+	}
+	.footer__nav .footer__content:nth-child(3){
+		@apply lg:w-[12rem]
+	}
+	.footer__nav .footer__content:last-child{
+		@apply lg:w-[12rem]
+	}
+	.footer__nav a{
+		@apply flex flex-row justify-between
+	}
+	.footer__nav a i.open{
+		@apply rotate-180
+	}
+	.footer__nav a i{
+		@apply lg:hidden
+	}
+	.footer__nav ul.drop{
+		@apply hidden
+		lg:block
+	}
+	.footer__nav ul.drop.open{
+		@apply block transition-all
+	}
+	.footer__nav ul.drop li{
+		@apply my-[1.5rem] text-[0.8rem] text-semento
+		lg:text-[1rem] lg:font-normal
+	}
+	.footer__nav ul.drop li:hover{
+		@apply lg:text-maitim lg:transform lg:scale-[1.05]
+	}
+	.footer__content #oms{
+		@apply lg:font-medium
+	}
+	.footer__contact{
+		@apply bg-puti flex flex-col gap-[1.8rem] py-[2rem]
+	}
+	.footer__contact p{
+		@apply text-[0.8rem] text-semento
+	}
+	.footer__icons{
+		@apply flex gap-[1rem]
+	}
+	.footer__icons a i{
+		@apply text-[1.7rem] text-maitim
+		lg:p-[0.8rem] lg:rounded-full lg:bg-transparent
+	}
+	.footer__icons a i:hover{
+		@apply lg:p-[0.8rem] lg:rounded-full lg:bg-gray-300 lg:origin-center lg:duration-[0.5s]
+	}
+	.footer__text{
+		@apply flex flex-col gap-[1rem]
+		lg:flex lg:flex-row
+	}
+	.footer__text a:hover{
+		@apply lg:underline
+	}
+	.footer__text a:not(:last-child){
+		@apply lg:border-r-2 lg:border-gray-500 lg:pr-[1rem]
 	}
 }

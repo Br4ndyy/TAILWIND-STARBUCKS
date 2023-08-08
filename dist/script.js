@@ -62,6 +62,14 @@ function removeActiveContent() {
 	});
 }
 
+const drop = document.querySelectorAll("ul.footer__nav a");
+drop.forEach((link) =>{
+	link.addEventListener("click", () => {
+		link.nextElementSibling.classList.toggle("open");
+		link.querySelector("i").classList.toggle("open");
+	})
+})
+
 const headerNav = document.querySelector('.header__nav');
 const toggleMenu = document.querySelector('.toggle__menu');
 const hokbu = document.querySelector('.buhok');

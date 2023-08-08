@@ -14,7 +14,7 @@ module.exports = {
 				medyomaputi:'#f9f9f9'
 			},
 			backgroundImage: {
-				'burat': "url('./img3/background.webp')",
+				'omsim': "url('./img3/background.webp')",
 			}
 		},
 	},
