@@ -51,6 +51,23 @@
 	background: #006320;
 }
 
+.btn.bg--transparent{
+	background:transparent;
+	border: 1px solid black;
+}
+.btn.bg--transparent--white{
+	background:transparent;
+	border: 1px solid white;
+}
+.btn.bg--transparent--white:hover{
+	transform: scale(1.1);
+	border: 1px solid white;
+}
+.btn.bg--transparent:hover{
+	transform: scale(1.1);
+	border: 1px solid black;
+}
+
 @layer components {
 	/*------HEADER-----*/
 
@@ -601,5 +618,85 @@
 	}
 	.footer__text a:not(:last-child){
 		@apply lg:border-r-2 lg:border-gray-500 lg:pr-[1rem]
+	}
+
+	/*--------------------------------------------------------------HOME PAGE-----------------------------------------------------------*/
+	#top{
+		@apply pt-[8rem]
+	}
+	#top .bkgd{
+		@apply bg-leni  mx-auto
+		lg:w-[90rem]
+	}
+	#top .cover__wrapper{
+		@apply lg:flex lg:flex-row-reverse
+	}
+	.second{
+		@apply py-[2rem]
+	}
+	.second .bkgd{
+		@apply bg-lasalle mx-auto
+		lg:w-[90rem]
+	}
+	.second .cover__text{
+		@apply bg-lasalle text-puti
+	}
+	.second .cover__text a{
+		@apply border-puti
+	}
+	.third .bkgd{
+		@apply bg-indigagi mx-auto
+		lg:w-[90rem]
+	}
+	.third .cover__wrapper{
+		@apply lg:flex lg:flex-row-reverse
+	}
+	.third .cover__text{
+		@apply bg-indigagi
+	}
+	.fourth{
+		@apply py-[2rem] flex flex-col gap-[3rem]
+		lg:pt-[2rem] lg:pb-[1rem]
+	}
+	.fourth .bkgd{
+		@apply bg-bumble mx-auto
+		lg:w-[90rem]
+	}
+	.fourth p{
+		@apply text-[1rem] w-[25rem] mx-auto text-center
+		lg:w-[42rem]
+	}
+	.fourth .cover__text{
+		@apply bg-bumble
+	}
+	.cover__wrapper{
+		@apply lg:flex lg:justify-center
+	}
+	.cover__wrapper img{
+		@apply lg:w-[45rem]
+	}
+	.cover__text{
+		@apply flex flex-col gap-[2rem] text-center p-[1.8rem]
+		lg:w-[45rem] lg:my-auto
+	}
+	.cover__text h2{
+		@apply text-[1.8rem] font-semibold
+		lg:text-[3rem] lg:w-[15rem] lg:mx-auto
+	}
+	.second .cover__text h2{
+		@apply lg:w-[30rem] lg:mx-auto
+	}
+	.third .cover__text h2{
+		@apply lg:w-full lg:mx-0
+	}
+	.fourth .cover__text h2{
+		@apply lg:w-full lg:mx-0
+	}
+	.cover__text p{
+		@apply text-[1.4rem] font-semibold
+		lg:w-[29rem] lg:mx-auto
+	}
+	.cover__text a{
+		@apply mx-auto text-[1rem] font-semibold
 	}
 }
